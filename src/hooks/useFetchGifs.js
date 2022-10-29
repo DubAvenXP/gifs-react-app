@@ -17,8 +17,12 @@ export const useFetchGifs = (category) => {
         setImages(images.filter(img => img.id !== id));
     }
 
+    // useEffect hook is used to execute a function when the component is rendered
     useEffect(() => {
+        // getGifs(category).then((gifs) => setImages(gifs) );
+        // getGifs(category).then(setImages);
         getImages();
+
     }, []);
 
     return {
